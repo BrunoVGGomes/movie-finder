@@ -1,0 +1,51 @@
+@use './base.scss';
+
+:root {
+  --btn-outline-default-color: var(--gray-4);
+  --btn-outline-default-hover-color: var(--gray-2);
+  --btn-outline-default-hover-bk-color: var(--gray-5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --btn-outline-default-color: var(--gray-3);
+    --btn-outline-default-hover-color: var(--gray-2);
+    --btn-outline-default-hover-bk-color: var(--gray-4);
+  }
+}
+
+.btn-outline-base {
+  background-color: transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 0.5rem 1rem;
+}
+
+.btn-outline-default {
+  @extend .btn-outline-base;
+  border: 1px solid var(--btn-outline-default-color) !important;
+  color: var(--btn-outline-default-color);
+
+  &:hover,
+  &.active {
+    border-color: var(--btn-outline-default-hover-color);
+    color: var(--btn-outline-default-hover-color);
+    background-color: var(--btn-outline-default-hover-bk-color);
+  }
+}
+
+.btn-outline-relevant {
+  @extend .btn-outline-base;
+  border: 1px solid var(--brand-color) !important;
+  color: var(--brand-color);
+
+  &:hover,
+  &.active {
+    color: var(--white);
+    background-color: var(--brand-color);
+  }
+}

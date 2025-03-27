@@ -1,0 +1,51 @@
+@use './base.scss';
+@use './card.scss';
+@use './form.scss';
+@use './typography.scss';
+
+body {
+  background-color: var(--bk-color);
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-color);
+  }
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bk-color);
+
+  .app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    width: 100%;
+    background-color: var(--bk-color);
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,74 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+  --vt-c-red: #db441e;
+
+  --white: #ffffff;
+  --white-soft: #f8f8f8;
+  --white-mute: #f2f2f2;
+
+  --gray-1: #fafafa;
+  --gray-2: #eeeeee;
+  --gray-3: #d8d8d8;
+  --gray-4: #696969;
+  --gray-5: #282828;
+  --gray-6: #181818;
+  --gray-7: #121212;
+
+  --black: #181818;
+  --black-soft: #222222;
+  --black-mute: #282828;
+
+  --red: #db441e;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-dark-3: rgba(139, 139, 139, 0.48);
+  --vt-c-dark-4: rgba(168, 168, 168, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --brand-color: var(--red);
+}
+
+:root {
+  --bk-color: var(--white);
+
+  --header-bk-color: var(--brand-color);
+  --header-brand-color: var(--white);
+
+  --color-heading: var(--vt-c-text-light-1);
+
+  --navbar-color: var(--white);
+  --navbar-hover-color: var(--white);
+  --navbar-link-color: var(--vt-c-white-mute);
+  --navbar-toggler-bk-color: var(--vt-c-dark-4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bk-color: var(--vt-c-black);
+
+    --header-bk-color: var(--gray-7);
+    --header-brand-color: var(--brand-color);
+
+    --color-heading: var(--vt-c-text-dark-1);
+
+    --navbar-color: var(--white);
+    --navbar-hover-color: var(--brand-color);
+    --navbar-link-color: var(--vt-c-white-mute);
+    --navbar-toggler-bk-color: var(--vt-c-dark-4);
+  }
+}

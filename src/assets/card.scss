@@ -1,0 +1,31 @@
+@use './base.scss';
+
+:root {
+  --card-border-color: var(--vt-c-divider-light-2);
+  --card-bk-color: var(--white-soft);
+  --card-text-color: var(--gray-5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-border-color: var(--vt-c-divider-dark-2);
+    --card-bk-color: var(--gray-5);
+    --card-text-color: var(--gray-1);
+  }
+}
+
+.card-box {
+  background-color: var(--card-bk-color);
+  border: 1px solid var(--card-border-color) !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  color: var(--card-text-color);
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}

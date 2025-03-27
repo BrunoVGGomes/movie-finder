@@ -1,0 +1,21 @@
+@use './base.scss';
+
+:root {
+  --text-color: var(--gray-4);
+  --text-color-secondary: var(--gray-4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--gray-2);
+    --text-color-secondary: var(--gray-4);
+  }
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.text-color-secondary {
+  color: var(--text-color-secondary);
+}
