@@ -1,21 +1,22 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, defineAsyncComponent } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useMoviesStore } from '@/stores/movies'
 import { useUserPreferencesStore } from '@/stores/userPreferences'
 import MoviesFilters from '@/components/movies/MoviesFilters/MoviesFilters.vue'
 import LoadingSpinner from '@/components/layout/LoadingSpinner/LoadingSpinner.vue'
 import ThePagination from '@/components/layout/ThePagination/ThePagination.vue'
-import { useRouter } from 'vue-router'
-import MovieCardGrid from '@/components/movies/MovieCardGrid/MovieCardGrid.vue'
 
 const moviesStore = useMoviesStore()
 const userPreferencesStore = useUserPreferencesStore()
-const router = useRouter()
 const moviesGrid = ref(null)
 
 const { movies, genres, currentPage, totalPages, loading } = storeToRefs(moviesStore)
 const { filters } = storeToRefs(userPreferencesStore)
+
+const MovieCardGrid = defineAsyncComponent(
+  () => import('@/components/movies/MovieCardGrid/MovieCardGrid.vue'),
+)
 
 onMounted(async () => {
   await moviesStore.fetchGenres()
