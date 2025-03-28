@@ -54,6 +54,7 @@ const updateRatingFilter = (rating) => {
   }
 }
 
+// TODO: Items per page is not changing API answer. Verify API documentation for this function
 const updateItemsPerPage = (items) => {
   filters.value = {
     ...filters.value,

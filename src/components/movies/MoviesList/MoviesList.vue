@@ -28,8 +28,8 @@ const handlePageChange = async (page) => {
   await moviesStore.fetchMovies(filters.value)
   loading.value = false
 
-  // Scroll para o primeiro item da lista
   const firstMovie = moviesGrid.value?.firstElementChild
+
   if (firstMovie) {
     const headerOffset = 100
     const elementPosition = firstMovie.getBoundingClientRect().top
