@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import FavoriteButton from './FavoriteButton.vue'
-import { useFavoritesStore } from '@/stores/favorites'
+import { useFavoritesStore } from '@/stores/favorites/favorites'
 
 describe('FavoriteButton', () => {
   const createWrapper = (movieId = 1, options = {}) => {

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useFavoritesStore } from '@/stores/favorites'
+import { useFavoritesStore } from '@/stores/favorites/favorites'
 import { useMovieDetailsStore } from '@/stores/movieDetails'
 import MovieCardGrid from '@/components/movies/MovieCardGrid/MovieCardGrid.vue'
 
